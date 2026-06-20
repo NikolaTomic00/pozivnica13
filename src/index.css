@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Poiret+One&family=Quicksand:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,400&family=Poiret+One&family=Quicksand:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -252,9 +252,10 @@ a {
 .details-families {
   margin-top: 17px !important;
   color: var(--details-text);
-  font-family: "Edwardian Script ITC", cursive;
-  font-size: 42px;
-  line-height: 0.95;
+  font-family: "Great Vibes", "Edwardian Script ITC", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.15;
 }
 .details-divider {
   width: min(76%, 250px);
