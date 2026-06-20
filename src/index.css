@@ -114,7 +114,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .events-timeline::before { position: absolute; top: 30px; bottom: 30px; left: 8px; width: 0; border-left: 1px solid var(--sand); content: ''; }
 .event-card { position: relative; display: grid; grid-template-columns: 64px 1fr; column-gap: 18px; align-items: center; min-height: 152px; border: 1px solid rgba(159, 137, 108, .36); padding: 20px; background: rgba(255, 255, 255, .82); box-shadow: 0 12px 34px rgba(44, 46, 35, .07); }
 .event-dot { position: absolute; top: 50%; left: -17px; width: 13px; height: 13px; border: 3px solid var(--cream); border-radius: 50%; background: var(--sand-deep); box-shadow: 0 0 0 1px var(--sand-deep); transform: translate(-50%, -50%); }
-.event-icon { grid-row: 1 / 6; width: 58px; height: 58px; object-fit: contain; filter: grayscale(1) sepia(.5) opacity(.74); }
+.event-icon { grid-row: 1 / 6; width: 58px; height: 58px; object-fit: contain; filter: brightness(0); }
 .event-time { margin: 0; color: var(--sand-deep); font-family: 'Poiret One', sans-serif; font-size: 26px; line-height: 1; }
 .event-card h3 { margin: 7px 0 0; font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; font-weight: 400; line-height: 1.2; }
 .event-card address { margin-top: 6px; font-size: 14px; font-style: normal; line-height: 1.45; }
