@@ -5,8 +5,8 @@ const events = [
     icon: publicAsset("Mask-group-8.svg"),
     title: "Crkveno venčanje",
     time: "13:00",
-    address: "Crkveno venčanje",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Pećinci+crkva",
+    address: "Crkva Svetog Nikole, Sibač",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Crkva+Svetog+Nikole+Sibač",
   },
   {
     icon: publicAsset("Mask-group-10.svg"),

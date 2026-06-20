@@ -13,6 +13,12 @@ function InvitationDetailsSection() {
 
           <p className="details-location">Svečana sala „Kristal”, Pećinci</p>
 
+          <div className="details-times">
+            <p>13.00 h - crkveno venčanje</p>
+            <p>16.30 h - svečana proslava</p>
+            <p>17.30 h - građansko venčanje</p>
+          </div>
+
           <p className="details-closing">Radosno vas očekujemo,</p>
 
           <p className="details-families">Porodice Jović i Stević</p>
