@@ -15,7 +15,7 @@ function InvitationDetailsSection() {
 
           <p className="details-closing">Radosno vas očekujemo,</p>
 
-          <p className="details-families">Nina i Nemanja</p>
+          <p className="details-families">Porodice Jović i Stević</p>
 
           <span className="details-divider" aria-hidden="true" />
 
