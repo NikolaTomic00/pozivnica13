@@ -1,6 +1,6 @@
 export default function FooterSection() {
   return (
-    <footer className="bg-[var(--cream)] px-6 py-6 text-center font-sans text-[13px] leading-6 text-[var(--velvet)]">
+    <footer className="bg-[var(--cream)] px-6 py-0 text-center font-sans text-[13px] leading-6 text-[var(--velvet)]">
       <p>
         © 2026{" "}
         <a
