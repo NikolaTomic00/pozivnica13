@@ -532,7 +532,6 @@ a {
   fill: var(--sand-deep);
   filter: drop-shadow(0 5px 8px rgba(44, 46, 35, 0.12));
   transform: translate(-50%, -50%);
-  animation: calendar-heartbeat 1.45s ease-in-out infinite;
 }
 .calendar-current-day {
   position: relative;
@@ -541,19 +540,6 @@ a {
   font-weight: 700;
   text-shadow: 0 1px 2px rgba(44, 46, 35, 0.25);
 }
-@keyframes calendar-heartbeat {
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  45% {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-  70% {
-    transform: translate(-50%, -50%) scale(0.98);
-  }
-}
-
 .gallery-section {
   padding: 38px 16px 66px;
   background: var(--paper);

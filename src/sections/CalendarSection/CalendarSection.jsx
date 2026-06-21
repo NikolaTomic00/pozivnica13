@@ -14,7 +14,7 @@ const calendarCells = [
 export default function CalendarSection() {
   return (
     <section className="calendar-section" aria-label="Datum venčanja">
-      <div className="calendar-card" data-reveal="scale">
+      <div className="calendar-card">
         <div className="calendar-heading">
           <p>Sačuvajte datum</p>
           <h2>Septembar</h2>
