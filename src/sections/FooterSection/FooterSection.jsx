@@ -5,8 +5,6 @@ export default function FooterSection() {
         © 2026{" "}
         <a
           href="https://epozivnice.online"
-          target="_blank"
-          rel="noreferrer"
           className="underline underline-offset-2"
         >
           epozivnice.online

@@ -39,7 +39,7 @@ export default function EventDetailsSection() {
             <p className="event-time">{event.time}</p>
             <h3>{event.title}</h3>
             <address>{event.address}</address>
-            <a href={event.mapUrl} target="_blank" rel="noreferrer" className="event-map">
+            <a href={event.mapUrl} className="event-map">
               Pogledaj na mapi
             </a>
           </article>
