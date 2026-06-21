@@ -4,7 +4,7 @@ const formUrl =
 export default function RsvpSection() {
   return (
     <section className="px-5 pb-16 pt-8 text-center sm:pb-20 sm:pt-10">
-      <div className="mx-auto flex max-w-md flex-col items-center">
+      <div className="mx-auto flex max-w-md flex-col items-center" data-reveal="up">
         <h2 className="font-playfair text-[24px] font-normal italic leading-[1.2] tracking-[-0.648px] text-[var(--velvet)]">
           Radujemo se vašem dolasku
         </h2>

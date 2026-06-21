@@ -1,7 +1,7 @@
 function InvitationDetailsSection() {
   return (
     <section className="details-section" aria-label="Invitation details">
-      <div className="details-shell">
+      <div className="details-shell" data-reveal="up">
         <div className="details-card">
           <span className="details-ring" aria-hidden="true" />
 

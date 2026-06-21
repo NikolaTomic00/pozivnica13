@@ -23,7 +23,7 @@ export default function CountdownSection() {
 
   return (
     <section className="flex items-center py-8 text-center sm:py-12">
-      <div className="flex w-full flex-col items-center bg-[var(--sand-deep)] px-4 py-12 text-[var(--cream)] sm:px-10 sm:py-16">
+      <div className="flex w-full flex-col items-center bg-[var(--sand-deep)] px-4 py-12 text-[var(--cream)] sm:px-10 sm:py-16" data-reveal="up">
         <p className="text-xs uppercase tracking-[.4em]">Brojimo zajedno</p>
         <div className="mt-10 grid w-full max-w-2xl grid-cols-4 gap-3 sm:gap-8">
           {countdown.map(([number, label]) => (
