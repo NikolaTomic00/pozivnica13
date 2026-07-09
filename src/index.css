@@ -64,6 +64,22 @@ a {
   background: var(--sand-deep);
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 750ms ease,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.petal-mark {
+  stroke: currentColor;
+  stroke-width: 1.25;
+}
+
 .hero-section {
   position: relative;
   display: flex;
@@ -238,7 +254,7 @@ a {
   place-items: start center;
   width: min(100%, 430px);
   margin: 0 auto;
-  padding: 14px 24px 24px;
+  padding: 14px 16px 24px;
 }
 .details-shell {
   width: 100%;
@@ -247,7 +263,7 @@ a {
   box-shadow: 0 18px 45px rgba(44, 46, 35, 0.1);
   opacity: 0;
   transform: translateY(24px) scale(0.985);
-  animation: details-frame-arrive 450ms cubic-bezier(0.22, 1, 0.36, 1) 1.82s forwards;
+  animation: details-frame-arrive 950ms cubic-bezier(0.22, 1, 0.36, 1) 120ms forwards;
 }
 .details-card {
   position: relative;
@@ -267,7 +283,7 @@ a {
   content: "";
   clip-path: inset(0 100% 0 0);
   pointer-events: none;
-  animation: details-border-draw 550ms cubic-bezier(0.22, 1, 0.36, 1) 1.82s forwards;
+  animation: details-border-draw 1.05s cubic-bezier(0.22, 1, 0.36, 1) 260ms forwards;
 }
 .details-ring {
   width: 48px;
@@ -619,6 +635,290 @@ a {
   outline-offset: 4px;
 }
 
+
+.countdown-section {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+}
+.countdown-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 66px 18px 76px;
+  background: var(--sand-deep);
+  color: var(--cream);
+  text-align: center;
+}
+.countdown-inner > .petal-mark {
+  position: absolute;
+  top: -44px;
+  left: -35px;
+  width: 170px;
+  opacity: 0.16;
+  transform: rotate(-20deg);
+}
+.countdown-title {
+  margin: 0;
+  white-space: nowrap;
+  font-family: "Quicksand", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  max-width: 672px;
+  margin: 30px auto 0;
+}
+.countdown-box {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.countdown-box + .countdown-box {
+  border-left: 1px solid rgba(251, 250, 247, 0.27);
+}
+.countdown-value {
+  color: inherit;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+}
+.countdown-label {
+  margin-top: 8px;
+  color: inherit;
+  font-family: "Quicksand", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  opacity: 0.76;
+  text-transform: uppercase;
+}
+
+.rsvp-section {
+  position: relative;
+  overflow: hidden;
+  padding: 54px 20px 70px;
+  background: var(--cream);
+  text-align: center;
+}
+.rsvp-section::before {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(159, 137, 108, 0.45) 0.45px, transparent 0.45px);
+  background-size: 7px 7px;
+  content: "";
+  opacity: 0.2;
+  pointer-events: none;
+}
+.rsvp-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(100%, 448px);
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  color: var(--sand-deep);
+}
+.rsvp-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.05;
+}
+.rsvp-text {
+  max-width: 384px;
+  margin: 12px 0 0;
+  color: var(--velvet);
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.rsvp-form {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  margin-top: 28px;
+  color: var(--details-text);
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+}
+.rsvp-form label {
+  display: grid;
+  gap: 7px;
+}
+.rsvp-form label > span {
+  color: var(--sand-deep);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(159, 137, 108, 0.56);
+  border-radius: 0;
+  background: transparent;
+  color: var(--details-text);
+  outline: none;
+  padding: 13px 2px;
+  resize: vertical;
+}
+.rsvp-form textarea {
+  min-height: 82px;
+}
+.rsvp-form input::placeholder,
+.rsvp-form textarea::placeholder {
+  color: rgba(102, 85, 66, 0.46);
+}
+.submit-rsvp {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 99px;
+  margin-top: 2px;
+  background: var(--sand-deep);
+  color: #fff;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0 22px;
+  text-transform: uppercase;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    filter 200ms ease;
+}
+.submit-rsvp:hover,
+.submit-rsvp:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(44, 46, 35, 0.18);
+}
+.submit-rsvp:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+.submit-rsvp:focus-visible {
+  outline: 2px solid var(--sand-deep);
+  outline-offset: 4px;
+}
+.rsvp-error {
+  margin: 0;
+  color: #9b3232;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+.rsvp-success {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  margin-top: 28px;
+  border: 1px solid rgba(159, 137, 108, 0.56);
+  border-radius: 90px 90px 18px 18px;
+  background: var(--paper);
+  color: var(--details-text);
+  padding: 38px 24px;
+  text-align: center;
+}
+.rsvp-success > span {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sand-deep);
+  color: #fff;
+}
+.rsvp-success h3 {
+  margin: 18px 0 5px;
+  color: var(--sand-deep);
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.rsvp-success p {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.footer-section {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 57px 20px 42px;
+  background: var(--sand-deep);
+  color: var(--cream);
+  text-align: center;
+}
+.footer-section .petal-mark {
+  position: absolute;
+  right: -30px;
+  bottom: -38px;
+  width: 150px;
+  opacity: 0.15;
+}
+.footer-initials {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+}
+.footer-note {
+  margin-top: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.footer-legal {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  max-width: calc(100% - 28px);
+  margin: 0;
+  color: currentColor;
+  font-family: "Quicksand", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  opacity: 0.45;
+  text-align: left;
+}
+.footer-legal a {
+  color: currentColor;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @keyframes hero-frame-arrive {
   to {
     opacity: 1;
@@ -667,6 +967,10 @@ a {
   .details-card::before {
     clip-path: none;
   }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (min-width: 640px) {
@@ -682,6 +986,18 @@ a {
   .events-timeline {
     width: min(100%, 680px);
     padding-left: 34px;
+  }
+  .countdown-grid {
+    max-width: 520px;
+  }
+  .countdown-inner {
+    padding: 72px 40px 82px;
+  }
+  .countdown-value {
+    font-size: 46px;
+  }
+  .countdown-label {
+    font-size: 9px;
   }
   .event-card {
     grid-template-columns: 80px 1fr;

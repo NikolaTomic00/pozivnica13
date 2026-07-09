@@ -9,7 +9,7 @@ const photos = [
 
 export default function GallerySection() {
   return (
-    <section className="gallery-section" aria-label="Moje fotografije">
+    <section className="gallery-section reveal" aria-label="Moje fotografije">
       <div className="section-heading">
         <span>Uspomene</span>
         <h2>Moje fotografije</h2>

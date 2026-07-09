@@ -26,7 +26,7 @@ const events = [
 
 export default function EventDetailsSection() {
   return (
-    <section className="events-section" aria-label="Raspored događaja">
+    <section className="events-section reveal" aria-label="Raspored događaja">
       <div className="section-heading">
         <span>Naš dan</span>
         <h2>Raspored događaja</h2>

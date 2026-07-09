@@ -13,7 +13,7 @@ const calendarCells = [
 
 export default function CalendarSection() {
   return (
-    <section className="calendar-section" aria-label="Datum venčanja">
+    <section className="calendar-section reveal" aria-label="Datum venčanja">
       <div className="calendar-card">
         <div className="calendar-heading">
           <p>Sačuvajte datum</p>

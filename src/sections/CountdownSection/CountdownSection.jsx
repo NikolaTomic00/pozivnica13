@@ -1,40 +1,55 @@
 import { useEffect, useState } from "react";
+import PetalMark from "../../components/PetalMark.jsx";
 
-const weddingDate = new Date("2026-09-26T16:30:00+02:00");
+const weddingDate = new Date("2026-09-26T16:30:00+02:00").getTime();
+
+function getTimeLeft() {
+  const difference = Math.max(weddingDate - Date.now(), 0);
+
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / (1000 * 60)) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
+  };
+}
+
+function CountdownBox({ value, label }) {
+  return (
+    <div className="countdown-box">
+      <span className="countdown-value">{String(value).padStart(2, "0")}</span>
+      <span className="countdown-label">{label}</span>
+    </div>
+  );
+}
 
 export default function CountdownSection() {
-  const [timeLeft, setTimeLeft] = useState(() =>
-    Math.max(0, weddingDate.getTime() - Date.now()),
-  );
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setTimeLeft(Math.max(0, weddingDate.getTime() - Date.now()));
+      setTimeLeft(getTimeLeft());
     }, 1000);
+
     return () => window.clearInterval(timer);
   }, []);
 
-  const countdown = [
-    [Math.floor(timeLeft / 86400000), "dana"],
-    [Math.floor((timeLeft / 3600000) % 24), "sati"],
-    [Math.floor((timeLeft / 60000) % 60), "minuta"],
-    [Math.floor((timeLeft / 1000) % 60), "sekundi"],
+  const countdownItems = [
+    ["days", "dani"],
+    ["hours", "sati"],
+    ["minutes", "minuti"],
+    ["seconds", "sekunde"],
   ];
 
   return (
-    <section className="flex items-center py-8 text-center sm:py-12">
-      <div className="flex w-full flex-col items-center bg-[var(--sand-deep)] px-4 py-12 text-[var(--cream)] sm:px-10 sm:py-16">
-        <p className="text-xs uppercase tracking-[.4em]">Brojimo zajedno</p>
-        <div className="mt-10 grid w-full max-w-2xl grid-cols-4 gap-3 sm:gap-8">
-          {countdown.map(([number, label]) => (
-            <div key={label}>
-              <div className="font-heading text-4xl sm:text-6xl">
-                {String(number).padStart(2, "0")}
-              </div>
-              <div className="mt-2 text-[10px] uppercase tracking-[.2em] opacity-75 sm:text-xs">
-                {label}
-              </div>
-            </div>
+    <section className="countdown-section reveal" aria-label="Countdown">
+      <div className="countdown-inner">
+        <PetalMark />
+        <p className="countdown-title">Brojimo zajedno</p>
+
+        <div className="countdown-grid">
+          {countdownItems.map(([key, label]) => (
+            <CountdownBox key={key} value={timeLeft[key]} label={label} />
           ))}
         </div>
       </div>
