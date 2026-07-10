@@ -3,7 +3,7 @@ import HeroSection from "./sections/HeroSection/HeroSection.jsx";
 import InvitationDetailsSection from "./sections/InvitationDetailsSection/InvitationDetailsSection.jsx";
 import CalendarSection from "./sections/CalendarSection/CalendarSection.jsx";
 import EventDetailsSection from "./sections/EventDetailsSection/EventDetailsSection.jsx";
-import RingSection from "./sections/RingSection/RingSection.jsx";
+import MusicSection from "./sections/MusicSection/MusicSection.jsx";
 import CountdownSection from "./sections/CountdownSection/CountdownSection.jsx";
 import RsvpSection from "./sections/RsvpSection/RsvpSection.jsx";
 import FooterSection from "./sections/FooterSection/FooterSection.jsx";
@@ -31,7 +31,7 @@ function App() {
       <InvitationDetailsSection />
       <EventDetailsSection />
       <CalendarSection />
-      <RingSection />
+      <MusicSection />
       <CountdownSection />
       <RsvpSection />
       <FooterSection />

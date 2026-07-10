@@ -570,36 +570,167 @@ a {
   object-fit: cover;
 }
 
-.ring-section {
-  padding: 24px 20px 38px;
+.music-section {
+  padding: 20px 16px 42px;
+  background:
+    linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
 }
-.ring-photo-wrap {
-  position: relative;
-  width: min(100%, 420px);
-  aspect-ratio: 1;
+.music-inner {
+  width: min(100%, 430px);
   margin: 0 auto;
+}
+.music-kicker {
+  margin: 0 0 16px;
+  color: var(--sand-deep);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.music-card {
   overflow: hidden;
+  border: 1px solid rgba(159, 137, 108, 0.4);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 20px 48px rgba(44, 46, 35, 0.09);
 }
-.ring-photo-wrap::after {
+.music-cover {
+  position: relative;
+  aspect-ratio: 1.38;
+  overflow: hidden;
+  background: var(--soft);
+}
+.music-cover::after {
   position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.78);
+  inset: 10px;
+  border: 1px solid rgba(251, 250, 247, 0.58);
   content: "";
+  pointer-events: none;
 }
-.ring-photo-wrap img {
+.music-cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
-.ring-photo-wrap span {
+.music-cover-shade {
   position: absolute;
-  right: 23px;
-  bottom: 26px;
+  inset: 0;
+  background: linear-gradient(to top, rgba(44, 46, 35, 0.72), rgba(44, 46, 35, 0.03) 66%);
+}
+.music-copy {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1;
+  padding: 0 22px 21px;
+  color: var(--cream);
+}
+.music-copy h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.15;
+}
+.music-copy p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  opacity: 0.82;
+  text-transform: uppercase;
+}
+.music-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 17px 20px 19px;
+  color: var(--sand-deep);
+}
+.music-play {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--sand-deep);
+  border-radius: 50%;
+  padding: 0;
+  background: var(--sand);
+  box-shadow: 0 10px 22px rgba(44, 46, 35, 0.13);
   color: #fff;
-  font-family: "Edwardian Script ITC", cursive;
-  font-size: 43px;
-  text-shadow: 0 2px 10px rgba(44, 46, 35, 0.35);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+.music-play:hover,
+.music-play:focus-visible {
+  background: var(--sand-deep);
+  box-shadow: 0 14px 28px rgba(44, 46, 35, 0.18);
+  transform: translateY(-2px);
+}
+.music-play:active {
+  transform: translateY(0);
+}
+.music-play:focus-visible {
+  outline: 2px solid var(--sand-deep);
+  outline-offset: 4px;
+}
+.music-play svg {
+  width: 20px;
+  height: 20px;
+}
+.music-play-icon {
+  margin-left: 2px;
+}
+.music-track {
+  min-width: 0;
+  flex: 1;
+}
+.music-progress {
+  display: block;
+  width: 100%;
+  height: 5px;
+  appearance: none;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--sand-deep) 0 var(--progress),
+    rgba(159, 137, 108, 0.24) var(--progress) 100%
+  );
+  cursor: pointer;
+}
+.music-progress::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  appearance: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--sand-deep);
+  box-shadow: 0 1px 5px rgba(44, 46, 35, 0.25);
+}
+.music-progress::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--sand-deep);
+  box-shadow: 0 1px 5px rgba(44, 46, 35, 0.25);
+}
+.music-times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  color: var(--details-text);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.78;
 }
 
 .rsvp-button {
